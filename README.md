@@ -40,7 +40,10 @@ Install
 Configuration
 
 The package configuration lives at packages/lastdino/chrome-laravel/src/config/chrome.php.
-
+#### Command added
+```
+php artisan vendor:publish --provider="LastDino\ChromeLaravel\ChromeServiceProvider" --tag=chrome-config --no-interaction
+```
 Common environment variables:
 - CHROME_PATH: absolute path to Chrome/Chromium (optional)
 - CHROME_HEADLESS: new | old | disabled (default: new)
@@ -55,7 +58,7 @@ Usage
 Use the Chrome facade to render a URL to a temporary PDF file path.
 
 Code (PHP):
-
+```
 use LastDino\ChromeLaravel\Facades\Chrome;
 
 public function download()
@@ -67,7 +70,7 @@ public function download()
 
     return response()->download($tmpPath, 'page.pdf')->deleteFileAfterSend();
 }
-
+```
 Testing
 
 - php artisan test
@@ -125,6 +128,10 @@ README (日本語)
 設定
 
 設定ファイルは packages/lastdino/chrome-laravel/src/config/chrome.php にあります。
+#### Command added
+```
+php artisan vendor:publish --provider="LastDino\ChromeLaravel\ChromeServiceProvider" --tag=chrome-config --no-interaction
+```
 
 主な環境変数:
 - CHROME_PATH: Chrome/Chromium 実行ファイルのパス（任意）
@@ -140,7 +147,7 @@ README (日本語)
 Chrome ファサードを使って URL を PDF にし、一時ファイルパスを取得します。
 
 コード（PHP）:
-
+```
 use LastDino\ChromeLaravel\Facades\Chrome;
 
 public function download()
@@ -152,7 +159,7 @@ public function download()
 
     return response()->download($tmpPath, 'page.pdf')->deleteFileAfterSend();
 }
-
+```
 テスト
 
 - php artisan test
