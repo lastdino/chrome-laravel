@@ -1,0 +1,33 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "lastdino/chrome-laravel",
+    "description": "Laravel integration for chrome-php/chrome with a service provider and fluent manager for rendering PDFs, etc.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "chrome",
+        "headless",
+        "pdf",
+        "chrome-php"
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^12.0",
+        "chrome-php/chrome": "^1.15"
+    },
+    "autoload": {
+        "psr-4": {
+            "LastDino\\ChromeLaravel\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LastDino\\ChromeLaravel\\ChromeServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
