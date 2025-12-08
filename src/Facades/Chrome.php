@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Facade;
 
 /**
  * @method static string pdf(string $url, array $options = [])
+ * @method static string pdfFromHtml(string $html, array $options = [])
  */
 class Chrome extends Facade
 {
