@@ -23,6 +23,9 @@ Requirements
 
 Install
 
+0) Package installation (if using in your own project)
+   - composer require lastdino/chrome-laravel
+
 1) Backend dependencies
    - composer install
 
@@ -104,6 +107,9 @@ README (日本語)
 - システム上に Chrome/Chromium がインストールされていること
 
 インストール手順
+
+0) パッケージのインストール（ご自身のプロジェクトに導入する場合）
+   - composer require lastdino/chrome-laravel
 
 1) バックエンド依存関係
    - composer install
